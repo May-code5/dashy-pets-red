@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Veterinaria Dashy Pet's | 4 Sedes en Santa Anita y Lima Este — Traumatología, Rayos X, Ecografía, Laboratorio y Bot 24/7</title>
+    <meta name="description" content="Plataforma Corporativa Multi-Sede de Clínica Veterinaria Dashy Pet's. 4 sedes interconectadas especializadas en Traumatología, Rayos X Digital, Ecografía, Laboratorio Clínico y Pet Shop.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#090f1d'
+                        }
+                    },
+                    boxShadow: {
+                        'corp': '0 20px 50px -12px rgba(15, 23, 42, 0.12)',
+                        'glow': '0 0 30px rgba(20, 184, 166, 0.35)',
+                        'phone': '0 25px 60px -15px rgba(0, 0, 0, 0.45)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        .corp-hero-bg {
+            background-color: #090f1d;
+            background-image: 
+                radial-gradient(at 10% 15%, rgba(13, 148, 136, 0.32) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, rgba(2, 132, 199, 0.25) 0px, transparent 55%),
+                radial-gradient(at 50% 50%, rgba(15, 23, 42, 0.9) 0px, transparent 100%);
+        }
+        .wa-chat-bg {
+            background-color: #0b141a;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+            background-size: 18px 18px;
+        }
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65); }
+            70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .pulse-wa {
+            animation: pulse-green 2s infinite;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0d9488;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- 1. TOP CORPORATE UTILITY BAR -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+                <span class="inline-flex items-center gap-1.5 bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 px-2.5 py-0.5 rounded-full font-bold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    RED CORPORATIVA ACTIVA • 4 SEDES
+                </span>
+                <span class="hidden md:inline text-slate-400 font-medium">
+                    Centro de Traumatología, Rayos X Digital, Ecografía, Laboratorio Clínico y Pet Shop en Santa Anita y Lima Este
+                </span>
+            </div>
+            <div class="flex items-center gap-4 ml-auto">
+                <button onclick="scrollToSection('sedes')" class="hover:text-brand-300 transition flex items-center gap-1 font-semibold text-white">
+                    <i class="ph-fill ph-buildings text-brand-400"></i>
+                    <span>Ver las 4 Sedes</span>
+                </button>
+                <span class="text-slate-700">|</span>
+                <button onclick="scrollToSection('bot-demo')" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1 font-bold">
+                    <i class="ph-fill ph-robot"></i>
+                    <span>Probar Bot WhatsApp 24/7</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- STICKY CORPORATE HEADER -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Identity -->
+            <a href="#" class="flex items-center gap-3 group shrink-0">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-600 via-teal-600 to-sky-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition">
+                    <i class="ph-fill ph-paw-print text-2xl"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900">Dashy Pet's</span>
+                        <span class="bg-navy-900 text-brand-300 text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-md tracking-wider">4 Sedes</span>
+                    </div>
+                    <p class="text-xs text-slate-500 font-medium">Red de Clínicas Veterinarias & Diagnóstico</p>
+                </div>
+            </a>
+
+            <!-- Quick Sede Selector in Header (Desktop) -->
+            <div class="hidden xl:flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
+                <button onclick="selectBranch(0)" id="header-branch-0" class="header-branch-btn px-3 py-1.5 rounded-lg bg-white text-brand-700 shadow-sm transition">
+                    Sede La Arboleda
+                </button>
+                <button onclick="selectBranch(1)" id="header-branch-1" class="header-branch-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+                    Sede Portada de Ceres
+                </button>
+                <button onclick="selectBranch(2)" id="header-branch-2" class="header-branch-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+                    Sede Santa Anita III
+                </button>
+                <button onclick="selectBranch(3)" id="header-branch-3" class="header-branch-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+                    Sede Lima Este IV
+                </button>
+            </div>
+
+            <!-- Main Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="#sedes" class="hover:text-brand-600 transition">Nuestras 4 Sedes</a>
+                <a href="#diagnostico" class="hover:text-brand-600 transition">Trauma, RX, Eco y Lab</a>
+                <a href="#bot-demo" class="text-brand-700 font-bold hover:text-brand-800 flex items-center gap-1">
+                    <i class="ph-fill ph-whatsapp-logo"></i> Bot 24/7
+                </a>
+                <a href="#ordenes" class="hover:text-brand-600 transition">Órdenes Médicas</a>
+                <a href="#petshop" class="hover:text-brand-600 transition">Pet Shop & Spa</a>
+            </nav>
+
+            <!-- Header CTAs -->
+            <div class="hidden sm:flex items-center gap-2.5 shrink-0">
+                <button onclick="openFloatingBot()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition flex items-center gap-1.5 shadow-sm">
+                    <i class="ph-fill ph-robot text-brand-400 text-base"></i>
+                    <span>Simular Bot</span>
+                </button>
+                <a href="#ordenes" class="bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-1.5">
+                    <i class="ph-bold ph-calendar-check text-base"></i>
+                    <span>Agendar Cita</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-toggle" aria-label="Menú" class="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200">
+                <i class="ph-bold ph-list text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <div class="text-[11px] font-bold uppercase text-slate-400 px-2 pb-1">Selecciona tu Sede:</div>
+            <div class="grid grid-cols-2 gap-2 pb-3 border-b border-slate-100">
+                <button onclick="selectBranch(0); closeMobileMenu();" class="text-left p-2.5 rounded-xl bg-brand-50 border border-brand-200 text-xs font-bold text-brand-900">1. Sede La Arboleda</button>
+                <button onclick="selectBranch(1); closeMobileMenu();" class="text-left p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-800">2. Portada de Ceres</button>
+                <button onclick="selectBranch(2); closeMobileMenu();" class="text-left p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-800">3. Sede Santa Anita III</button>
+                <button onclick="selectBranch(3); closeMobileMenu();" class="text-left p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-800">4. Sede Lima Este IV</button>
+            </div>
+            <a href="#diagnostico" onclick="closeMobileMenu()" class="block py-2 px-3 rounded-lg font-semibold text-slate-700 hover:bg-brand-50">• Traumatología, Rayos X, Ecografía y Laboratorio</a>
+            <a href="#bot-demo" onclick="closeMobileMenu()" class="block py-2 px-3 rounded-lg font-bold text-brand-700 bg-brand-50/60">• Demo en Vivo: Bot de WhatsApp 24/7</a>
+            <a href="#ordenes" onclick="closeMobileMenu()" class="block py-2 px-3 rounded-lg font-semibold text-slate-700 hover:bg-brand-50">• Recepción de Órdenes Médicas y Citas</a>
+            <a href="#petshop" onclick="closeMobileMenu()" class="block py-2 px-3 rounded-lg font-semibold text-slate-700 hover:bg-brand-50">• Catálogo Pet Shop, Farmacia y Grooming</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO CORPORATIVO MULTI-SEDE + DERIVADOR INTELIGENTE -->
+    <section class="corp-hero-bg text-white py-12 sm:py-20 lg:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Left Column: Corporate Value Proposition -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex flex-wrap items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-brand-200">
+                        <span class="bg-brand-500 text-navy-950 font-extrabold px-2 py-0.5 rounded-full text-[11px]">4 SEDES</span>
+                        <span>Red de Diagnóstico, Cirugía y Bienestar Animal en Santa Anita</span>
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[54px] leading-[1.1] tracking-tight">
+                        Respaldo médico en <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-teal-200 to-sky-300">Traumatología, Rayos X, Ecografía y Laboratorio</span> en nuestras 4 sedes.
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Somos la red veterinaria de referencia en Santa Anita. Conectamos nuestras <strong>4 sedes</strong> con tecnología propia de diagnóstico por imagen, laboratorio clínico en el día y atención automatizada 24/7 para cuidar a tu mascota sin demoras.
+                    </p>
+
+                    <!-- Trust Metrics Bar -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-brand-300">4 Sedes</div>
+                            <div class="text-xs text-slate-300 mt-0.5">Interconectadas en Lima Este</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-sky-300">RX & Eco</div>
+                            <div class="text-xs text-slate-300 mt-0.5">Diagnóstico digital propio</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-emerald-300">En el día</div>
+                            <div class="text-xs text-slate-300 mt-0.5">Resultados de Laboratorio</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-amber-300">Bot 24/7</div>
+                            <div class="text-xs text-slate-300 mt-0.5">Triaje y citas en WhatsApp</div>
+                        </div>
+                    </div>
+
+                    <!-- Primary Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+                        <button onclick="scrollToSection('sedes')" class="bg-gradient-to-r from-brand-500 to-teal-500 hover:from-brand-600 hover:to-teal-600 text-navy-950 font-extrabold px-7 py-4 rounded-2xl shadow-glow transition flex items-center justify-center gap-2.5 text-base">
+                            <i class="ph-fill ph-map-pin-line text-xl"></i>
+                            <span>Elegir mi Sede más Cercana</span>
+                        </button>
+                        <button onclick="scrollToSection('bot-demo')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold px-6 py-4 rounded-2xl transition flex items-center justify-center gap-2 text-sm sm:text-base">
+                            <i class="ph-fill ph-whatsapp-logo text-[#25D366] text-xl"></i>
+                            <span>Probar Asistente Virtual en Vivo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Multi-Branch & Specialty Triage Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-7 shadow-2xl border border-slate-100 relative">
+                        <div class="flex items-center justify-between gap-2 pb-4 mb-5 border-b border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl shadow-sm">
+                                    <i class="ph-fill ph-git-branch"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand-600">Derivador Inteligente</span>
+                                    <h2 class="font-display font-extrabold text-lg text-slate-900">Atención Rápida por Sede</h2>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Online
+                            </span>
+                        </div>
+
+                        <!-- Step 1: Select Branch -->
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-500 mb-2">1. Elige la Sede Dashy Pet's:</label>
+                                <div class="grid grid-cols-2 gap-2" id="hero-branch-selector">
+                                    <button type="button" onclick="setHeroBranch(0)" id="hb-0" class="p-2.5 rounded-xl border-2 border-brand-600 bg-brand-50/70 text-left transition">
+                                        <div class="font-bold text-xs text-slate-900">Sede 1: La Arboleda</div>
+                                        <div class="text-[11px] text-brand-700 font-medium truncate">La Arboleda 122</div>
+                                    </button>
+                                    <button type="button" onclick="setHeroBranch(1)" id="hb-1" class="p-2.5 rounded-xl border-2 border-slate-200 hover:border-brand-300 text-left transition">
+                                        <div class="font-bold text-xs text-slate-900">Sede 2: Portada Ceres</div>
+                                        <div class="text-[11px] text-slate-500 truncate">Av. Los Chancas Mz O</div>
+                                    </button>
+                                    <button type="button" onclick="setHeroBranch(2)" id="hb-2" class="p-2.5 rounded-xl border-2 border-slate-200 hover:border-brand-300 text-left transition">
+                                        <div class="font-bold text-xs text-slate-900">Sede 3: Santa Anita III</div>
+                                        <div class="text-[11px] text-slate-500 truncate">Zona Centro / Ruiseñores</div>
+                                    </button>
+                                    <button type="button" onclick="setHeroBranch(3)" id="hb-3" class="p-2.5 rounded-xl border-2 border-slate-200 hover:border-brand-300 text-left transition">
+                                        <div class="font-bold text-xs text-slate-900">Sede 4: Lima Este IV</div>
+                                        <div class="text-[11px] text-slate-500 truncate">Atención & Diagnóstico</div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Select Specialty -->
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-500 mb-2">2. ¿Qué especialidad o examen necesita?</label>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <button type="button" onclick="triggerHeroDispatch('Traumatología y Ortopedia')" class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-500 transition text-left group">
+                                        <i class="ph-fill ph-bone text-xl text-brand-600 shrink-0"></i>
+                                        <div>
+                                            <div class="font-bold text-xs text-slate-900 group-hover:text-brand-700">Traumatología</div>
+                                            <div class="text-[10px] text-slate-500">Fracturas y cojeras</div>
+                                        </div>
+                                    </button>
+                                    <button type="button" onclick="triggerHeroDispatch('Rayos X Digital (Placas)')" class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-500 transition text-left group">
+                                        <i class="ph-fill ph-x-ray text-xl text-sky-600 shrink-0"></i>
+                                        <div>
+                                            <div class="font-bold text-xs text-slate-900 group-hover:text-sky-700">Rayos X (RX)</div>
+                                            <div class="text-[10px] text-slate-500">Placas en el acto</div>
+                                        </div>
+                                    </button>
+                                    <button type="button" onclick="triggerHeroDispatch('Ecografía Diagnóstica')" class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 hover:bg-teal-50 border border-slate-200 hover:border-teal-500 transition text-left group">
+                                        <i class="ph-fill ph-heartbeat text-xl text-teal-600 shrink-0"></i>
+                                        <div>
+                                            <div class="font-bold text-xs text-slate-900 group-hover:text-teal-700">Ecografía</div>
+                                            <div class="text-[10px] text-slate-500">Abdominal / Preñez</div>
+                                        </div>
+                                    </button>
+                                    <button type="button" onclick="triggerHeroDispatch('Laboratorio Clínico')" class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-500 transition text-left group">
+                                        <i class="ph-fill ph-flask text-xl text-emerald-600 shrink-0"></i>
+                                        <div>
+                                            <div class="font-bold text-xs text-slate-900 group-hover:text-emerald-700">Laboratorio</div>
+                                            <div class="text-[10px] text-slate-500">Sangre y descartes</div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Direct Action Footer inside Hero Card -->
+                            <div class="pt-2">
+                                <button type="button" onclick="triggerHeroDispatch('Consulta / Evaluación Integral')" class="w-full bg-navy-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 shadow">
+                                    <i class="ph-fill ph-whatsapp-logo text-[#25D366] text-lg"></i>
+                                    <span id="hero-dispatch-btn-text">Contactar con Sede La Arboleda (981 260 047)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SELECTOR INTERACTIVO DE LAS 4 SEDES DASHY PET'S -->
+    <section id="sedes" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <span class="inline-block bg-brand-100 text-brand-800 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    Cobertura Corporativa Multi-Sede
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Nuestras 4 Sedes a tu Servicio
+                </h2>
+            </div>
+            <p class="text-slate-600 text-sm sm:text-base max-w-md">
+                Selecciona cualquiera de nuestros 4 locales para ver sus especialidades disponibles, dirección exacta, mapa en vivo y WhatsApp directo de recepción.
+            </p>
+        </div>
+
+        <!-- 4 Sedes Selector Tabs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <button onclick="selectBranch(0)" id="branch-card-0" class="branch-tab text-left p-5 rounded-2xl border-2 border-brand-600 bg-white shadow-corp transition relative overflow-hidden">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="bg-brand-600 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-md">SEDE 1 • PRINCIPAL</span>
+                    <span class="text-xs font-bold text-amber-500 flex items-center gap-0.5"><i class="ph-fill ph-star"></i> 4.5</span>
+                </div>
+                <h3 class="font-display font-extrabold text-lg text-slate-900">Sede La Arboleda</h3>
+                <p class="text-xs text-slate-500 mt-1">La Arboleda 122, Santa Anita</p>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-700">
+                    <span>Centro RX, Eco, Trauma y Lab</span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                </div>
+            </button>
+
+            <button onclick="selectBranch(1)" id="branch-card-1" class="branch-tab text-left p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-brand-400 transition relative overflow-hidden">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="bg-slate-200 text-slate-700 text-[11px] font-extrabold px-2.5 py-0.5 rounded-md">SEDE 2</span>
+                    <span class="text-xs font-bold text-amber-500 flex items-center gap-0.5"><i class="ph-fill ph-star"></i> 4.2</span>
+                </div>
+                <h3 class="font-display font-extrabold text-lg text-slate-900">Sede Portada de Ceres</h3>
+                <p class="text-xs text-slate-500 mt-1">Av. Los Chancas Mz O Lt 9, Santa Anita</p>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                    <span>Clínica, Laboratorio y Pet Shop</span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                </div>
+            </button>
+
+            <button onclick="selectBranch(2)" id="branch-card-2" class="branch-tab text-left p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-brand-400 transition relative overflow-hidden">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="bg-slate-200 text-slate-700 text-[11px] font-extrabold px-2.5 py-0.5 rounded-md">SEDE 3</span>
+                    <span class="text-xs font-bold text-amber-500 flex items-center gap-0.5"><i class="ph-fill ph-star"></i> 4.8</span>
+                </div>
+                <h3 class="font-display font-extrabold text-lg text-slate-900">Sede Santa Anita III</h3>
+                <p class="text-xs text-slate-500 mt-1">Eje Comercial Santa Anita</p>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                    <span>Consultas, Vacunas y Grooming</span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                </div>
+            </button>
+
+            <button onclick="selectBranch(3)" id="branch-card-3" class="branch-tab text-left p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-brand-400 transition relative overflow-hidden">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="bg-slate-200 text-slate-700 text-[11px] font-extrabold px-2.5 py-0.5 rounded-md">SEDE 4</span>
+                    <span class="text-xs font-bold text-amber-500 flex items-center gap-0.5"><i class="ph-fill ph-star"></i> 4.7</span>
+                </div>
+                <h3 class="font-display font-extrabold text-lg text-slate-900">Sede Lima Este IV</h3>
+                <p class="text-xs text-slate-500 mt-1">Red de Especialidades & Diagnóstico</p>
+                <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-600">
+                    <span>Cirugía, Ecografía y Farmacia</span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                </div>
+            </button>
+        </div>
+
+        <!-- Active Branch Detailed Panel -->
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-corp overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span id="detail-badge" class="bg-brand-100 text-brand-800 text-xs font-extrabold px-3 py-1 rounded-full">
+                                Sede 1 • Centro Quirúrgico y Diagnóstico
+                            </span>
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Abierto Hoy
+                            </span>
+                        </div>
+
+                        <h3 id="detail-title" class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                            Clínica Veterinaria Dashy Pet's — Sede La Arboleda
+                        </h3>
+
+                        <p id="detail-desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Sede equipada con unidad completa de Traumatología y Ortopedia, Rayos X Digital, Ecografía Diagnóstica y Laboratorio Clínico propio para resultados en el día.
+                        </p>
+
+                        <div class="space-y-2.5 pt-2 text-sm text-slate-700">
+                            <div class="flex items-start gap-3">
+                                <i class="ph-fill ph-map-pin text-brand-600 text-xl shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-slate-900">Dirección:</strong>
+                                    <span id="detail-address">La Arboleda 122, Santa Anita 15009, Lima</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ph-fill ph-phone-call text-brand-600 text-xl shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-900">Central / WhatsApp de Sede:</strong>
+                                    <span id="detail-phone" class="font-bold text-brand-700">+51 981 260 047</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="ph-fill ph-clock text-brand-600 text-xl shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-900">Horario de Atención:</strong>
+                                    <span id="detail-hours">Lunes a Sábado: 8:00 a.m. – 8:00 p.m. | Domingos y Emergencias previa coordinación</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Specialties tags of this branch -->
+                        <div class="pt-2">
+                            <div class="text-xs font-bold uppercase text-slate-400 mb-2">Servicios destacados en esta sede:</div>
+                            <div id="detail-tags" class="flex flex-wrap gap-2">
+                                <!-- Filled dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+                        <button onclick="openBranchWhatsApp()" class="flex-1 bg-[#25D366] hover:bg-[#1ebe5d] text-slate-950 font-extrabold py-3.5 px-5 rounded-xl shadow transition flex items-center justify-center gap-2 text-sm">
+                            <i class="ph-fill ph-whatsapp-logo text-xl"></i>
+                            <span id="detail-wa-btn">Agendar en Sede La Arboleda</span>
+                        </button>
+                        <a id="detail-maps-link" href="https://maps.google.com/?q=La+Arboleda+122,+Santa+Anita+15009" target="_blank" rel="noopener noreferrer"
+                           class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                            <i class="ph-fill ph-navigation-arrow text-lg text-brand-400"></i>
+                            <span>Abrir en Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Live Map -->
+                <div class="lg:col-span-6 bg-slate-100 min-h-[340px] lg:min-h-full relative">
+                    <iframe id="detail-map-iframe"
+                        title="Mapa de Sede Dashy Pet's"
+                        src="https://www.google.com/maps?q=La+Arboleda+122,+Santa+Anita,+Lima,+Peru&output=embed"
+                        class="w-full h-full min-h-[340px] border-0"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. UNIDAD DE DIAGNÓSTICO AVANZADO Y TRAUMATOLOGÍA (LAS 4 ESPECIALIDADES DEL CLIENTE) -->
+    <section id="diagnostico" class="py-16 sm:py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block bg-brand-500/20 text-brand-300 border border-brand-500/30 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3">
+                    Centro de Alta Especialidad Veterinaria
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">
+                    Traumatología, Rayos X, Ecografía y Laboratorio Clínico
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-3">
+                    Resolvemos casos complejos con equipamiento propio en nuestras sedes. Atendemos tanto a pacientes de nuestra red como a <strong>órdenes médicas derivadas de otros consultorios</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+                
+                <!-- Card 1: Traumatología -->
+                <div class="card-hover bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-500 text-slate-950 flex items-center justify-center text-3xl font-bold shadow-lg">
+                                <i class="ph-fill ph-bone"></i>
+                            </div>
+                            <span class="bg-brand-500/20 text-brand-300 border border-brand-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                                Cirugía Ortopédica & Fracturas
+                            </span>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">1. Traumatología y Ortopedia</h3>
+                        <p class="text-slate-300 text-sm sm:text-base mb-5">
+                            Evaluación clínica y quirúrgica especializada para mascotas con cojeras agudas o crónicas, atropellos, caídas de altura o displasias articulares.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-200 mb-6">
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-brand-400 text-base shrink-0"></i>
+                                <span>Osteosíntesis y placas óseas</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-brand-400 text-base shrink-0"></i>
+                                <span>Fijadores externos y entablillados</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-brand-400 text-base shrink-0"></i>
+                                <span>Luxación patelar y cadera</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-brand-400 text-base shrink-0"></i>
+                                <span>Ruptura de ligamento cruzado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-slate-400">Incluye evaluación prequirúrgica</span>
+                        <button onclick="prefillOrder('Traumatología y Ortopedia')" class="bg-brand-500 hover:bg-brand-400 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+                            <span>Separar Cita Traumatología</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Rayos X Digital -->
+                <div class="card-hover bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-sky-500 text-slate-950 flex items-center justify-center text-3xl font-bold shadow-lg">
+                                <i class="ph-fill ph-x-ray"></i>
+                            </div>
+                            <span class="bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                                Alta Nitidez Diagnóstica
+                            </span>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">2. Rayos X Veterinario (RX)</h3>
+                        <p class="text-slate-300 text-sm sm:text-base mb-5">
+                            Toma de placas radiográficas en minutos para estudio de fracturas, columna vertebral, silueta cardiaca, campos pulmonares y obstrucciones digestivas.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-200 mb-6">
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-sky-400 text-base shrink-0"></i>
+                                <span>Estudio óseo, cráneo y columna</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-sky-400 text-base shrink-0"></i>
+                                <span>Radiografía torácica y pulmonar</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-sky-400 text-base shrink-0"></i>
+                                <span>Descarte de cuerpos extraños</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-sky-400 text-base shrink-0"></i>
+                                <span>Recepción de órdenes externas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-slate-400">Entrega rápida de imágenes</span>
+                        <button onclick="prefillOrder('Rayos X Digital (Placas)')" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+                            <span>Cotizar / Agendar Rayos X</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Ecografía -->
+                <div class="card-hover bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-teal-400 text-slate-950 flex items-center justify-center text-3xl font-bold shadow-lg">
+                                <i class="ph-fill ph-heartbeat"></i>
+                            </div>
+                            <span class="bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                                Ultrasonido en Tiempo Real
+                            </span>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">3. Ecografía Diagnóstica</h3>
+                        <p class="text-slate-300 text-sm sm:text-base mb-5">
+                            Estudio ecográfico indoloro y detallado de órganos abdominales, diagnóstico temprano de gestación, control fetal y ecografía de urgencia (FAST).
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-200 mb-6">
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-teal-400 text-base shrink-0"></i>
+                                <span>Abdominal completa (hígado/riñón)</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-teal-400 text-base shrink-0"></i>
+                                <span>Control gestacional y latido fetal</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-teal-400 text-base shrink-0"></i>
+                                <span>Descarte de piometra y cálculos</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-teal-400 text-base shrink-0"></i>
+                                <span>Informe ecográfico detallado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-slate-400">Sugerido: 6-8h de ayuno previo</span>
+                        <button onclick="prefillOrder('Ecografía Diagnóstica')" class="bg-teal-400 hover:bg-teal-300 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+                            <span>Separar Turno Ecografía</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Laboratorio Clínico -->
+                <div class="card-hover bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-400 text-slate-950 flex items-center justify-center text-3xl font-bold shadow-lg">
+                                <i class="ph-fill ph-flask"></i>
+                            </div>
+                            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                                Procesamiento en el Día
+                            </span>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">4. Laboratorio Clínico Veterinario</h3>
+                        <p class="text-slate-300 text-sm sm:text-base mb-5">
+                            Análisis hematológicos, bioquímicos, citológicos y pruebas de descarte viral o parasitario para un diagnóstico médico 100% confiable.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-200 mb-6">
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-emerald-400 text-base shrink-0"></i>
+                                <span>Hemograma y Bioquímica (Renal/Hepático)</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-emerald-400 text-base shrink-0"></i>
+                                <span>Perfiles prequirúrgicos completos</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-emerald-400 text-base shrink-0"></i>
+                                <span>Descarte Ehrlichia, Parvo, Distemper</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/80">
+                                <i class="ph-fill ph-check-circle text-emerald-400 text-base shrink-0"></i>
+                                <span>Raspado cutáneo, citología y orina</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex flex-wrap items-center justify-between gap-3">
+                        <span class="text-xs text-slate-400">Envío de resultados por WhatsApp</span>
+                        <button onclick="prefillOrder('Laboratorio Clínico')" class="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition flex items-center gap-2">
+                            <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+                            <span>Consultar Análisis de Lab</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DEMO EN VIVO DEL BOT ASISTENTE DE WHATSAPP 24/7 (EL DIFERENCIADOR CLAVE) -->
+    <section id="bot-demo" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-navy-950 via-navy-900 to-brand-900 rounded-3xl p-6 sm:p-10 lg:p-12 text-white shadow-2xl border border-slate-800">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Explanation of the Bot Value for the 4 Branches -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-[#25D366]/20 text-[#25D366] border border-[#25D366]/30 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider">
+                        <i class="ph-fill ph-robot text-base"></i>
+                        Demostración Interactiva en Vivo
+                    </div>
+
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl leading-tight">
+                        Asistente Virtual Automatizado para las 4 Sedes (WhatsApp 24/7)
+                    </h2>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Prueba aquí mismo cómo el <strong>Bot de Dashy Pet's</strong> atiende a tus clientes día y noche, filtra a cuál de las <strong>4 sedes</strong> desean acudir, les indica el ayuno para ecografías o laboratorio y entrega la ficha lista a recepción.
+                    </p>
+
+                    <!-- Interactive Preset Scenarios to Test the Bot -->
+                    <div class="space-y-2.5">
+                        <div class="text-xs font-extrabold uppercase tracking-wider text-brand-300">
+                            Haz clic en un caso real para ver cómo responde el Bot:
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <button onclick="runBotScenario('rx_eco')" class="p-3.5 rounded-2xl bg-white/10 hover:bg-brand-500/30 border border-white/15 hover:border-brand-400 text-left transition group">
+                                <div class="font-bold text-xs sm:text-sm text-white flex items-center justify-between">
+                                    <span>🩻 1. Agendar RX / Ecografía</span>
+                                    <i class="ph-bold ph-play text-brand-300"></i>
+                                </div>
+                                <p class="text-[11px] text-slate-300 mt-1">Pregunta si trae orden médica, elige sede e indica ayuno.</p>
+                            </button>
+
+                            <button onclick="runBotScenario('trauma')" class="p-3.5 rounded-2xl bg-white/10 hover:bg-brand-500/30 border border-white/15 hover:border-brand-400 text-left transition group">
+                                <div class="font-bold text-xs sm:text-sm text-white flex items-center justify-between">
+                                    <span>🦴 2. Urgencia Traumatología</span>
+                                    <i class="ph-bold ph-play text-brand-300"></i>
+                                </div>
+                                <p class="text-[11px] text-slate-300 mt-1">Evalúa síntomas de fractura/cojera y prioriza turno.</p>
+                            </button>
+
+                            <button onclick="runBotScenario('lab')" class="p-3.5 rounded-2xl bg-white/10 hover:bg-brand-500/30 border border-white/15 hover:border-brand-400 text-left transition group">
+                                <div class="font-bold text-xs sm:text-sm text-white flex items-center justify-between">
+                                    <span>🧪 3. Laboratorio y Resultados</span>
+                                    <i class="ph-bold ph-play text-brand-300"></i>
+                                </div>
+                                <p class="text-[11px] text-slate-300 mt-1">Cotiza hemograma/perfil prequirúrgico o consulta resultados.</p>
+                            </button>
+
+                            <button onclick="runBotScenario('sedes')" class="p-3.5 rounded-2xl bg-white/10 hover:bg-brand-500/30 border border-white/15 hover:border-brand-400 text-left transition group">
+                                <div class="font-bold text-xs sm:text-sm text-white flex items-center justify-between">
+                                    <span>📍 4. Ubicación de las 4 Sedes</span>
+                                    <i class="ph-bold ph-play text-brand-300"></i>
+                                </div>
+                                <p class="text-[11px] text-slate-300 mt-1">Envía direcciones, horarios y deriva a la sede elegida.</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Operational Benefits List -->
+                    <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+                        <div class="bg-slate-900/70 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-check-circle text-[#25D366] text-lg shrink-0"></i>
+                            <span>Ahorra +3 horas diarias en recepción</span>
+                        </div>
+                        <div class="bg-slate-900/70 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-check-circle text-[#25D366] text-lg shrink-0"></i>
+                            <span>Clasifica clientes por cada una de las 4 sedes</span>
+                        </div>
+                        <div class="bg-slate-900/70 p-3 rounded-xl border border-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-check-circle text-[#25D366] text-lg shrink-0"></i>
+                            <span>No pierde citas fuera de horario</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Phone Simulator -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="w-full max-w-md bg-slate-950 rounded-[36px] p-3 border-4 border-slate-800 shadow-phone">
+                        <!-- Phone Header WhatsApp Style -->
+                        <div class="bg-[#202c33] rounded-t-[26px] px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold relative">
+                                    <i class="ph-fill ph-paw-print text-xl"></i>
+                                    <span class="w-2.5 h-2.5 rounded-full bg-[#25D366] border-2 border-[#202c33] absolute bottom-0 right-0"></span>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-white flex items-center gap-1">
+                                        <span>Dashy Pet's Bot (4 Sedes)</span>
+                                        <i class="ph-fill ph-seal-check text-[#25D366] text-sm"></i>
+                                    </div>
+                                    <div class="text-[11px] text-emerald-400">Asistente Virtual • En línea 24/7</div>
+                                </div>
+                            </div>
+                            <button onclick="resetBotChat()" title="Reiniciar conversación" class="text-xs text-slate-300 hover:text-white bg-slate-800 px-2.5 py-1 rounded-lg">
+                                Reiniciar
+                            </button>
+                        </div>
+
+                        <!-- Chat Messages Area -->
+                        <div id="bot-chat-window" class="wa-chat-bg h-[360px] overflow-y-auto p-4 space-y-3 text-xs sm:text-sm">
+                            <!-- Populated dynamically by JS -->
+                        </div>
+
+                        <!-- Interactive Quick Reply Buttons inside Simulator -->
+                        <div id="bot-quick-options" class="bg-[#111b21] px-3 py-2.5 border-t border-slate-800 flex flex-wrap gap-1.5">
+                            <!-- Populated dynamically -->
+                        </div>
+
+                        <!-- Chat Input Bar -->
+                        <form onsubmit="handleCustomBotInput(event)" class="bg-[#202c33] rounded-b-[26px] p-2.5 flex items-center gap-2">
+                            <input id="bot-user-input" type="text" placeholder="Escribe aquí para probar el bot..." 
+                                   class="flex-1 bg-[#2a3942] text-white placeholder-slate-400 text-xs sm:text-sm px-3.5 py-2.5 rounded-full outline-none">
+                            <button type="submit" aria-label="Enviar" class="w-9 h-9 rounded-full bg-[#00a884] text-slate-950 flex items-center justify-center font-bold shrink-0">
+                                <i class="ph-fill ph-paper-plane-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. RECEPCIÓN DE ÓRDENES MÉDICAS Y AGENDAMIENTO ESTRUCTURADO -->
+    <section id="ordenes" class="py-16 sm:py-24 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="inline-block bg-brand-100 text-brand-800 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    Citas & Órdenes Médicas Externas
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                    Agenda tu Atención o Cotiza tu Orden de RX, Ecografía y Laboratorio
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">
+                    Elige la sede que te quede más cerca. Tu solicitud llegará ordenada al WhatsApp de recepción lista para confirmar tu turno.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Form -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 shadow-corp border border-slate-200">
+                    <form onsubmit="submitStructuredOrder(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-600 mb-1.5">1. Selecciona la Sede *</label>
+                                <select id="form-branch" onchange="updateOrderPreview()" class="w-full px-4 py-3 rounded-xl border-2 border-brand-500 bg-brand-50/40 font-bold text-sm text-slate-900 outline-none">
+                                    <option value="0">Sede 1: La Arboleda (981 260 047)</option>
+                                    <option value="1">Sede 2: Portada de Ceres (957 202 905)</option>
+                                    <option value="2">Sede 3: Santa Anita III (981 260 047)</option>
+                                    <option value="3">Sede 4: Lima Este IV (957 202 905)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-600 mb-1.5">2. Especialidad / Examen *</label>
+                                <select id="form-service" onchange="updateOrderPreview()" class="w-full px-4 py-3 rounded-xl border border-slate-200 font-bold text-sm text-slate-900 outline-none bg-white">
+                                    <option value="Traumatología y Ortopedia">🦴 Traumatología y Ortopedia</option>
+                                    <option value="Rayos X Digital (Placas)">🩻 Rayos X Digital (Placas)</option>
+                                    <option value="Ecografía Diagnóstica">🩺 Ecografía Diagnóstica</option>
+                                    <option value="Laboratorio Clínico">🧪 Laboratorio Clínico (Análisis)</option>
+                                    <option value="Paquete Diagnóstico (RX + Eco + Lab)">📋 Evaluación + Imágenes / Laboratorio</option>
+                                    <option value="Consulta Médica / Vacunación">🐾 Consulta Médica / Vacunación</option>
+                                    <option value="Baño Medicado / Grooming / Pet Shop">🛁 Baño Medicado / Grooming / Pet Shop</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-600 mb-1.5">Tu Nombre *</label>
+                                <input type="text" id="form-owner" required placeholder="Ej. Andrea Torres" oninput="updateOrderPreview()"
+                                       class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-brand-600">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-600 mb-1.5">Mascota y Especie *</label>
+                                <input type="text" id="form-pet" required placeholder="Ej. Rocky (Perro)" oninput="updateOrderPreview()"
+                                       class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-brand-600">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-600 mb-1.5">¿Traes Orden Médica Externa?</label>
+                                <select id="form-order-type" onchange="updateOrderPreview()" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm outline-none bg-white">
+                                    <option value="Requiero evaluación en Dashy Pet's">No, busco evaluación en Dashy Pet's</option>
+                                    <option value="Sí, cuento con orden médica externa">Sí, tengo orden médica para examen</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase text-slate-600 mb-1.5">Fecha / Turno Preferido</label>
+                                <select id="form-turn" onchange="updateOrderPreview()" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm outline-none bg-white">
+                                    <option value="Hoy mismo">Hoy mismo (Prioritario)</option>
+                                    <option value="Turno Mañana">Turno Mañana</option>
+                                    <option value="Turno Tarde">Turno Tarde</option>
+                                    <option value="Mañana">Para Mañana</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-extrabold uppercase text-slate-600 mb-1.5">Síntomas o indicación del examen (Opcional)</label>
+                            <textarea id="form-notes" rows="2" oninput="updateOrderPreview()" placeholder="Ej. Cojea de la pata derecha / Solicito ecografía abdominal y hemograma..."
+                                      class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm outline-none focus:border-brand-600"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#25D366] hover:bg-[#1ebe5d] text-slate-950 font-extrabold py-4 px-6 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-base">
+                            <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+                            <span>Enviar Solicitud a la Sede Seleccionada</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Preview of Dispatch -->
+                <div class="lg:col-span-5">
+                    <div class="bg-navy-900 text-white rounded-3xl p-6 shadow-xl border border-slate-800 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-9 h-9 rounded-xl bg-[#25D366] text-slate-950 flex items-center justify-center font-bold text-lg">
+                                    <i class="ph-fill ph-whatsapp-logo"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold">Ficha Automática de Recepción</div>
+                                    <div class="text-[11px] text-slate-400">Enrutamiento directo por sede</div>
+                                </div>
+                            </div>
+                            <span class="bg-brand-500/20 text-brand-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full">Auto-formato</span>
+                        </div>
+
+                        <div class="bg-[#0b141a] p-4 rounded-2xl border border-slate-800">
+                            <div id="order-preview-bubble" class="bg-[#005c4b] text-white text-xs sm:text-sm p-4 rounded-xl rounded-tl-none whitespace-pre-line font-sans leading-relaxed">
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/70 rounded-2xl p-3.5 text-xs text-slate-300 flex items-start gap-2.5">
+                            <i class="ph-fill ph-check-circle text-brand-400 text-lg shrink-0 mt-0.5"></i>
+                            <span>El sistema dirige automáticamente el mensaje al número de WhatsApp de la sede elegida sin confundir las agendas.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CATÁLOGO MULTI-SEDE PET SHOP, FARMACIA Y SPA -->
+    <section id="petshop" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <span class="inline-block bg-brand-100 text-brand-800 font-extrabold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2">
+                    Pet Shop, Farmacia & Spa en las 4 Sedes
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                    Farmacia Veterinaria, Alimentos Medicados y Grooming
+                </h2>
+            </div>
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap gap-2">
+                <button onclick="filterCatalog('all')" id="cat-all" class="cat-btn bg-navy-900 text-white font-bold text-xs px-4 py-2 rounded-xl transition">Todos</button>
+                <button onclick="filterCatalog('farmacia')" id="cat-farmacia" class="cat-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold text-xs px-4 py-2 rounded-xl transition">Farmacia & Postoperatorio</button>
+                <button onclick="filterCatalog('alimento')" id="cat-alimento" class="cat-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold text-xs px-4 py-2 rounded-xl transition">Alimentos Medicados</button>
+                <button onclick="filterCatalog('spa')" id="cat-spa" class="cat-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold text-xs px-4 py-2 rounded-xl transition">Baños & Grooming</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="catalog-grid">
+            <!-- Item 1 -->
+            <div data-category="farmacia" class="catalog-item bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-brand-50 text-brand-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Farmacia Clínica</span>
+                        <i class="ph-duotone ph-pill text-2xl text-brand-600"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-base text-slate-900">Recetas, Antibióticos y Analgésicos</h3>
+                    <p class="text-xs text-slate-500 mt-1.5">Stock completo de medicamentos veterinarios, protectores articulares, collares isabelinos y fajas postquirúrgicas.</p>
+                </div>
+                <button onclick="prefillOrder('Consulta de Farmacia / Medicamentos')" class="mt-4 w-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-bold text-xs py-2.5 rounded-xl transition">
+                    Consultar stock en mi sede
+                </button>
+            </div>
+
+            <!-- Item 2 -->
+            <div data-category="alimento" class="catalog-item bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-sky-50 text-sky-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Nutrición Clínica</span>
+                        <i class="ph-duotone ph-bowl-food text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-base text-slate-900">Alimentos Medicados (Renal, Hepático, Urinario)</h3>
+                    <p class="text-xs text-slate-500 mt-1.5">Dietas de prescripción veterinaria para recuperación quirúrgica, problemas renales, gastrointestinales y alergias.</p>
+                </div>
+                <button onclick="prefillOrder('Alimento Medicado / Pet Shop')" class="mt-4 w-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-bold text-xs py-2.5 rounded-xl transition">
+                    Consultar stock en mi sede
+                </button>
+            </div>
+
+            <!-- Item 3 -->
+            <div data-category="spa" class="catalog-item bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-teal-50 text-teal-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Spa & Dermatología</span>
+                        <i class="ph-duotone ph-drop text-2xl text-teal-600"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-base text-slate-900">Baños Medicados y Estética Canina</h3>
+                    <p class="text-xs text-slate-500 mt-1.5">Baños dermatológicos con shampoo medicado, corte de raza, limpieza de oídos, corte de uñas y glándulas.</p>
+                </div>
+                <button onclick="prefillOrder('Baño Medicado / Grooming / Pet Shop')" class="mt-4 w-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-bold text-xs py-2.5 rounded-xl transition">
+                    Reservar turno de baño
+                </button>
+            </div>
+
+            <!-- Item 4 -->
+            <div data-category="farmacia" class="catalog-item bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="bg-emerald-50 text-emerald-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Prevención</span>
+                        <i class="ph-duotone ph-shield-plus text-2xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-base text-slate-900">Antipulgas, Pipetas y Desparasitación</h3>
+                    <p class="text-xs text-slate-500 mt-1.5">Protección mensual y trimestral contra pulgas, garrapatas y ácaros para prevenir hemoparásitos como Ehrlichia.</p>
+                </div>
+                <button onclick="prefillOrder('Antipulgas / Vacunación')" class="mt-4 w-full bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-800 font-bold text-xs py-2.5 rounded-xl transition">
+                    Pedir en mi sede cercana
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER CORPORATIVO MULTI-SEDE CON SELLO MAY-CODE -->
+    <footer class="bg-navy-950 text-slate-400 py-14 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-800">
+                
+                <!-- Brand Col -->
+                <div class="lg:col-span-2 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white">
+                            <i class="ph-fill ph-paw-print text-xl"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-xl text-white">Red Veterinaria Dashy Pet's</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
+                        Red de 4 sedes veterinarias en Santa Anita y Lima Este. Especialistas en Traumatología, Rayos X Digital, Ecografía Diagnóstica, Laboratorio Clínico y Pet Shop.
+                    </p>
+                </div>
+
+                <!-- Sede 1 & 2 -->
+                <div class="space-y-2 text-xs">
+                    <div class="font-bold text-white uppercase tracking-wider mb-2">Sedes Principales</div>
+                    <p><strong class="text-brand-300">Sede 1 (La Arboleda):</strong><br>La Arboleda 122, Santa Anita<br>Tel: 981 260 047</p>
+                    <p class="pt-2"><strong class="text-brand-300">Sede 2 (Portada de Ceres):</strong><br>Av. Los Chancas Mz O Lt 9, Santa Anita<br>Tel: 957 202 905</p>
+                </div>
+
+                <!-- Sede 3 & 4 -->
+                <div class="space-y-2 text-xs">
+                    <div class="font-bold text-white uppercase tracking-wider mb-2">Sedes Red Lima Este</div>
+                    <p><strong class="text-brand-300">Sede 3 (Santa Anita III):</strong><br>Consultas, Vacunas y Grooming<br>Atención interconectada</p>
+                    <p class="pt-2"><strong class="text-brand-300">Sede 4 (Lima Este IV):</strong><br>Especialidades, Ecografía y Farmacia<br>Atención interconectada</p>
+                </div>
+
+                <!-- Especialidades -->
+                <div class="space-y-2 text-xs">
+                    <div class="font-bold text-white uppercase tracking-wider mb-2">Unidad Diagnóstica</div>
+                    <ul class="space-y-1.5">
+                        <li>• Traumatología y Ortopedia</li>
+                        <li>• Rayos X Digital (Placas)</li>
+                        <li>• Ecografía Abdominal y Gestacional</li>
+                        <li>• Laboratorio Clínico en el Día</li>
+                        <li>• Recepción de Órdenes Externas</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>© 2026 Red Clínica Veterinaria Dashy Pet's (4 Sedes). Todos los derechos reservados.</p>
+                <div class="bg-slate-900 border border-slate-800 px-4 py-2 rounded-full text-slate-300">
+                    Plataforma Multi-Sede + Bot desarrollada por <a href="https://maycodestudio.com" target="_blank" rel="noopener noreferrer" class="text-brand-400 font-extrabold hover:underline">MAY-CODE (maycodestudio.com)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BOT & WHATSAPP WIDGET -->
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2">
+        <button onclick="scrollToSection('bot-demo')" class="bg-navy-900 hover:bg-slate-800 text-white border border-brand-500/40 text-xs font-bold px-3.5 py-2 rounded-full shadow-lg flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-[#25D366] animate-ping"></span>
+            <span>Probar Bot 4 Sedes</span>
+        </button>
+        <button onclick="scrollToSection('ordenes')" class="bg-[#25D366] hover:bg-[#1ebe5d] text-slate-950 font-extrabold px-5 py-3.5 rounded-full shadow-2xl pulse-wa flex items-center gap-2 transition">
+            <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+            <span class="text-xs sm:text-sm">Agendar en mi Sede</span>
+        </button>
+    </div>
+
+    <!-- JAVASCRIPT: MULTI-BRANCH DATA, LIVE BOT ENGINE & WHATSAPP DISPATCH -->
+    <script>
+        // Data for the 4 Dashy Pet's Branches
+        const BRANCHES = [
+            {
+                id: 0,
+                shortName: "Sede La Arboleda",
+                badge: "Sede 1 • Centro Quirúrgico, Imágenes y Laboratorio",
+                title: "Clínica Veterinaria Dashy Pet's — Sede La Arboleda",
+                desc: "Sede principal de diagnóstico avanzado equipada con Traumatología y Ortopedia, Rayos X Digital, Ecografía Diagnóstica y Laboratorio Clínico propio para resultados en el día.",
+                address: "La Arboleda 122, Santa Anita 15009, Lima",
+                phoneDisplay: "+51 981 260 047",
+                phoneClean: "51981260047",
+                hours: "Lunes a Sábado: 8:00 a.m. – 8:00 p.m. | Domingos previa coordinación",
+                tags: ["🦴 Traumatología y Cirugía", "🩻 Rayos X Digital", "🩺 Ecografía", "🧪 Laboratorio Clínico", "📋 Órdenes Externas"],
+                mapQuery: "La+Arboleda+122,+Santa+Anita,+Lima,+Peru"
+            },
+            {
+                id: 1,
+                shortName: "Sede Portada de Ceres",
+                badge: "Sede 2 • Clínica, Laboratorio y Pet Shop",
+                title: "Clínica Veterinaria Dashy Pet's — Sede Portada de Ceres",
+                desc: "Atención clínica integral, toma de muestras para Laboratorio Clínico, control ecográfico, vacunación, farmacia veterinaria y Pet Shop completo en Portada de Ceres.",
+                address: "Av. Los Chancas Mz O Lt 9, Condominio Portada de Ceres, Santa Anita",
+                phoneDisplay: "+51 957 202 905",
+                phoneClean: "51957202905",
+                hours: "Lunes a Sábado: 8:30 a.m. – 8:00 p.m. | Domingos: 9:00 a.m. – 2:00 p.m.",
+                tags: ["🧪 Laboratorio Clínico", "🩺 Ecografía", "🐾 Consulta Especializada", "💊 Farmacia Veterinaria", "🛁 Grooming & Pet Shop"],
+                mapQuery: "Av.+Los+Chancas+Santa+Anita+Lima+Peru"
+            },
+            {
+                id: 2,
+                shortName: "Sede Santa Anita III",
+                badge: "Sede 3 • Consultas, Prevención y Estética",
+                title: "Clínica Veterinaria Dashy Pet's — Sede Santa Anita III",
+                desc: "Punto estratégico de la red Dashy Pet's para consultas médicas, rol de vacunación, desparasitación, baños medicados y derivación directa a Rayos X y Traumatología.",
+                address: "Zona Comercial Santa Anita (Interconectada a Red Dashy Pet's)",
+                phoneDisplay: "+51 981 260 047",
+                phoneClean: "51981260047",
+                hours: "Lunes a Sábado: 9:00 a.m. – 8:00 p.m.",
+                tags: ["🐾 Medicina Interna", "💉 Vacunación Completa", "🧪 Toma de Muestras Lab", "🛁 Baños Medicados", "🛍️ Alimentos Medicados"],
+                mapQuery: "Santa+Anita+Lima+Peru"
+            },
+            {
+                id: 3,
+                shortName: "Sede Lima Este IV",
+                badge: "Sede 4 • Especialidades, Diagnóstico y Cirugía",
+                title: "Clínica Veterinaria Dashy Pet's — Sede Lima Este IV",
+                desc: "Cuarta sede de la corporación Dashy Pet's orientada a diagnóstico ecográfico, cirugía de tejidos blandos, traumatología y hospitalización diurna.",
+                address: "Eje Lima Este / Santa Anita (Red Corporativa Dashy Pet's)",
+                phoneDisplay: "+51 957 202 905",
+                phoneClean: "51957202905",
+                hours: "Lunes a Sábado: 8:30 a.m. – 8:00 p.m.",
+                tags: ["🦴 Interconsulta Trauma", "🩺 Ecografía", "🏥 Cirugía General", "🧪 Laboratorio", "💊 Farmacia Quirúrgica"],
+                mapQuery: "Oval+Santa+Anita+Lima+Peru"
+            }
+        ];
+
+        let currentBranchIndex = 0;
+
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Mobile Menu
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Hero Branch Selector
+        function setHeroBranch(index) {
+            currentBranchIndex = index;
+            for (let i = 0; i < 4; i++) {
+                const btn = document.getElementById(`hb-${i}`);
+                if (i === index) {
+                    btn.className = "p-2.5 rounded-xl border-2 border-brand-600 bg-brand-50/70 text-left transition";
+                } else {
+                    btn.className = "p-2.5 rounded-xl border-2 border-slate-200 hover:border-brand-300 text-left transition";
+                }
+            }
+            const branch = BRANCHES[index];
+            document.getElementById('hero-dispatch-btn-text').textContent = `Contactar con ${branch.shortName} (${branch.phoneDisplay.replace('+51 ', '')})`;
+            selectBranch(index, false);
+        }
+
+        function triggerHeroDispatch(serviceName) {
+            document.getElementById('form-branch').value = String(currentBranchIndex);
+            const serviceSelect = document.getElementById('form-service');
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+                if (serviceSelect.options[i].value === serviceName) {
+                    serviceSelect.selectedIndex = i;
+                    break;
+                }
+            }
+            updateOrderPreview();
+            scrollToSection('ordenes');
+            setTimeout(() => document.getElementById('form-owner').focus(), 550);
+        }
+
+        // Switch Active Branch in Section 3
+        function selectBranch(index, shouldScroll = true) {
+            currentBranchIndex = index;
+            const b = BRANCHES[index];
+
+            // Update Section 3 Cards
+            for (let i = 0; i < 4; i++) {
+                const card = document.getElementById(`branch-card-${i}`);
+                const hBtn = document.getElementById(`header-branch-${i}`);
+                if (i === index) {
+                    card.className = "branch-tab text-left p-5 rounded-2xl border-2 border-brand-600 bg-white shadow-corp transition relative overflow-hidden";
+                    if (hBtn) hBtn.className = "header-branch-btn px-3 py-1.5 rounded-lg bg-white text-brand-700 shadow-sm transition";
+                } else {
+                    card.className = "branch-tab text-left p-5 rounded-2xl border-2 border-slate-200 bg-white hover:border-brand-400 transition relative overflow-hidden";
+                    if (hBtn) hBtn.className = "header-branch-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition";
+                }
+            }
+
+            // Populate detail view
+            document.getElementById('detail-badge').textContent = b.badge;
+            document.getElementById('detail-title').textContent = b.title;
+            document.getElementById('detail-desc').textContent = b.desc;
+            document.getElementById('detail-address').textContent = b.address;
+            document.getElementById('detail-phone').textContent = b.phoneDisplay;
+            document.getElementById('detail-hours').textContent = b.hours;
+            document.getElementById('detail-wa-btn').textContent = `Agendar en ${b.shortName} (${b.phoneDisplay.replace('+51 ', '')})`;
+            document.getElementById('detail-maps-link').href = `https://maps.google.com/?q=${b.mapQuery}`;
+            document.getElementById('detail-map-iframe').src = `https://www.google.com/maps?q=${b.mapQuery}&output=embed`;
+
+            const tagsContainer = document.getElementById('detail-tags');
+            tagsContainer.innerHTML = b.tags.map(t => `<span class="bg-slate-100 text-slate-800 border border-slate-200 text-xs font-bold px-3 py-1.5 rounded-xl">${t}</span>`).join('');
+
+            // Sync form select
+            document.getElementById('form-branch').value = String(index);
+            updateOrderPreview();
+
+            if (shouldScroll) {
+                scrollToSection('sedes');
+            }
+        }
+
+        function openBranchWhatsApp() {
+            const b = BRANCHES[currentBranchIndex];
+            const text = `Hola *Dashy Pet's (${b.shortName})* 🐾, vengo de su plataforma web y deseo consultar disponibilidad para una atención.`;
+            window.open(`https://wa.me/${b.phoneClean}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function prefillOrder(serviceName) {
+            const serviceSelect = document.getElementById('form-service');
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+                if (serviceSelect.options[i].value === serviceName) {
+                    serviceSelect.selectedIndex = i;
+                    break;
+                }
+            }
+            updateOrderPreview();
+            scrollToSection('ordenes');
+        }
+
+        // Structured WhatsApp Order Builder
+        function buildOrderMessage() {
+            const branchIdx = parseInt(document.getElementById('form-branch').value, 10) || 0;
+            const branch = BRANCHES[branchIdx];
+            const service = document.getElementById('form-service').value;
+            const owner = document.getElementById('form-owner').value.trim() || "[Nombre del Propietario]";
+            const pet = document.getElementById('form-pet').value.trim() || "[Mascota]";
+            const orderType = document.getElementById('form-order-type').value;
+            const turn = document.getElementById('form-turn').value;
+            const notes = document.getElementById('form-notes').value.trim();
+
+            let msg = `Hola *Dashy Pet's (${branch.shortName})* 🐾, envío mi solicitud desde la Plataforma Web:\n\n`;
+            msg += `🏥 *Sede elegida:* ${branch.shortName}\n`;
+            msg += `🩺 *Especialidad/Examen:* ${service}\n`;
+            msg += `👤 *Propietario:* ${owner}\n`;
+            msg += `🐶 *Paciente:* ${pet}\n`;
+            msg += `📋 *Orden médica:* ${orderType}\n`;
+            msg += `🕒 *Turno:* ${turn}`;
+            if (notes) {
+                msg += `\n💬 *Detalle:* ${notes}`;
+            }
+            return { msg, phone: branch.phoneClean };
+        }
+
+        function updateOrderPreview() {
+            const { msg } = buildOrderMessage();
+            document.getElementById('order-preview-bubble').textContent = msg;
+        }
+
+        function submitStructuredOrder(e) {
+            e.preventDefault();
+            const { msg, phone } = buildOrderMessage();
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+        }
+
+        // Catalog Filter
+        function filterCatalog(cat) {
+            const items = document.querySelectorAll('.catalog-item');
+            const buttons = ['all', 'farmacia', 'alimento', 'spa'];
+            buttons.forEach(b => {
+                const btn = document.getElementById(`cat-${b}`);
+                if (b === cat) {
+                    btn.className = "cat-btn bg-navy-900 text-white font-bold text-xs px-4 py-2 rounded-xl transition";
+                } else {
+                    btn.className = "cat-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold text-xs px-4 py-2 rounded-xl transition";
+                }
+            });
+            items.forEach(item => {
+                if (cat === 'all' || item.getAttribute('data-category') === cat) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // ==========================================
+        // INTERACTIVE WHATSAPP BOT SIMULATOR ENGINE
+        // ==========================================
+        const chatWindow = document.getElementById('bot-chat-window');
+        const quickOptions = document.getElementById('bot-quick-options');
+
+        function appendBotBubble(htmlContent, isUser = false) {
+            const wrapper = document.createElement('div');
+            wrapper.className = isUser ? "flex justify-end" : "flex justify-start";
+            const bubble = document.createElement('div');
+            bubble.className = isUser
+                ? "bg-[#005c4b] text-white px-3.5 py-2.5 rounded-2xl rounded-tr-none max-w-[85%] shadow"
+                : "bg-[#202c33] text-slate-100 px-3.5 py-2.5 rounded-2xl rounded-tl-none max-w-[88%] shadow border border-slate-700/60";
+            bubble.innerHTML = htmlContent;
+            wrapper.appendChild(bubble);
+            chatWindow.appendChild(wrapper);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function setQuickButtons(buttons) {
+            quickOptions.innerHTML = '';
+            buttons.forEach(b => {
+                const btn = document.createElement('button');
+                btn.type = "button";
+                btn.className = "bg-[#2a3942] hover:bg-brand-600 text-emerald-300 hover:text-white text-[11px] font-bold px-3 py-1.5 rounded-full border border-slate-700 transition";
+                btn.textContent = b.label;
+                btn.onclick = b.action;
+                quickOptions.appendChild(btn);
+            });
+        }
+
+        function resetBotChat() {
+            chatWindow.innerHTML = '';
+            appendBotBubble(`👋 ¡Hola! Bienvenido a la <strong>Red Veterinaria Dashy Pet's (4 Sedes)</strong> 🐾.<br><br>Soy el asistente virtual automático. ¿En qué podemos ayudar hoy a tu mascota?<br><br>1️⃣ <strong>Rayos X / Ecografía</strong><br>2️⃣ <strong>Traumatología y Cirugía</strong><br>3️⃣ <strong>Laboratorio Clínico</strong><br>4️⃣ <strong>Ver las 4 Sedes y Horarios</strong>`);
+            setQuickButtons([
+                { label: "1️⃣ Rayos X / Ecografía", action: () => runBotScenario('rx_eco') },
+                { label: "2️⃣ Traumatología", action: () => runBotScenario('trauma') },
+                { label: "3️⃣ Laboratorio", action: () => runBotScenario('lab') },
+                { label: "4️⃣ Las 4 Sedes", action: () => runBotScenario('sedes') }
+            ]);
+        }
+
+        function runBotScenario(type) {
+            if (type === 'rx_eco') {
+                appendBotBubble("Hola, quiero agendar una Ecografía / Rayos X para mi mascota.", true);
+                setTimeout(() => {
+                    appendBotBubble(`¡Con gusto! 🩻🩺 En <strong>Dashy Pet's</strong> realizamos <strong>Rayos X Digital y Ecografía</strong> en el día.<br><br>📋 <strong>Preparación rápida:</strong><br>• Para Ecografía abdominal: 6 a 8 horas de ayuno sólido.<br>• Para Rayos X: No requiere ayuno (salvo sedación).<br><br>¿En cuál de nuestras sedes prefieres atenderte o deseas enviar foto de tu orden médica?`);
+                    setQuickButtons([
+                        { label: "📍 Sede La Arboleda", action: () => finishBotBooking('Sede La Arboleda', 'Rayos X / Ecografía') },
+                        { label: "📍 Sede Portada de Ceres", action: () => finishBotBooking('Sede Portada de Ceres', 'Rayos X / Ecografía') },
+                        { label: "📷 Tengo Orden Externa", action: () => finishBotBooking('Sede La Arboleda', 'Orden Externa RX/Eco') }
+                    ]);
+                }, 350);
+            } else if (type === 'trauma') {
+                appendBotBubble("Mi mascota sufrió una caída y cojea, necesito Traumatología.", true);
+                setTimeout(() => {
+                    appendBotBubble(`🦴 Entiendo, los casos de <strong>Traumatología y Ortopedia</strong> tienen prioridad en nuestra red.<br><br>⚠️ <em>Importante:</em> No le administres analgésicos de uso humano.<br><br>Contamos con <strong>evaluación traumatológica + Placa de Rayos X en el acto</strong>. ¿A qué sede te queda más cerca acudir hoy?`);
+                    setQuickButtons([
+                        { label: "🏥 Ir a Sede La Arboleda", action: () => finishBotBooking('Sede La Arboleda', 'Urgencia Traumatología + RX') },
+                        { label: "🏥 Ir a Sede Portada Ceres", action: () => finishBotBooking('Sede Portada de Ceres', 'Evaluación Traumatología') }
+                    ]);
+                }, 350);
+            } else if (type === 'lab') {
+                appendBotBubble("Quiero consultar por análisis de Laboratorio Clínico.", true);
+                setTimeout(() => {
+                    appendBotBubble(`🧪 En nuestro <strong>Laboratorio Clínico Propio</strong> procesamos en el mismo día:<br>• Hemograma completo y Bioquímica (Renal/Hepático)<br>• Perfil Prequirúrgico<br>• Descarte de Parvovirus, Distemper y Ehrlichia<br><br>Recomendamos 8 horas de ayuno para muestras de sangre. ¿En qué sede agendamos la toma de muestra?`);
+                    setQuickButtons([
+                        { label: "🧪 Agendar en La Arboleda", action: () => finishBotBooking('Sede La Arboleda', 'Laboratorio Clínico') },
+                        { label: "🧪 Agendar en Portada Ceres", action: () => finishBotBooking('Sede Portada de Ceres', 'Laboratorio Clínico') }
+                    ]);
+                }, 350);
+            } else if (type === 'sedes') {
+                appendBotBubble("¿Cuáles son las direcciones de las 4 sedes?", true);
+                setTimeout(() => {
+                    appendBotBubble(`📍 <strong>Nuestras 4 Sedes Dashy Pet's:</strong><br><br>1️⃣ <strong>Sede La Arboleda:</strong> La Arboleda 122, Santa Anita (981 260 047)<br>2️⃣ <strong>Sede Portada de Ceres:</strong> Av. Los Chancas Mz O Lt 9 (957 202 905)<br>3️⃣ <strong>Sede Santa Anita III:</strong> Consultas y Grooming<br>4️⃣ <strong>Sede Lima Este IV:</strong> Especialidades y Diagnóstico<br><br>¿Con cuál sede te comunico ahora mismo?`);
+                    setQuickButtons([
+                        { label: "📲 Sede 1: La Arboleda", action: () => selectBranch(0, true) },
+                        { label: "📲 Sede 2: Portada Ceres", action: () => selectBranch(1, true) },
+                        { label: "🔄 Volver al inicio", action: () => resetBotChat() }
+                    ]);
+                }, 350);
+            }
+        }
+
+        function finishBotBooking(branchName, specialty) {
+            appendBotBubble(`Prefiero atenderme en ${branchName} para ${specialty}.`, true);
+            setTimeout(() => {
+                appendBotBubble(`✅ <strong>¡Pre-cita registrada por el Bot!</strong><br><br>He generado el resumen para recepción de <strong>${branchName}</strong>:<br>• <strong>Servicio:</strong> ${specialty}<br>• <strong>Estado:</strong> Prioritario<br><br>Un asesor o médico de la sede tomará tu chat en este instante sin que tengas que repetir tus datos. 🐾`);
+                setQuickButtons([
+                    { label: "📲 Abrir este pedido en WhatsApp real", action: () => prefillOrder('Paquete Diagnóstico (RX + Eco + Lab)') },
+                    { label: "🔄 Probar otro caso en el Bot", action: () => resetBotChat() }
+                ]);
+            }, 350);
+        }
+
+        function handleCustomBotInput(e) {
+            e.preventDefault();
+            const input = document.getElementById('bot-user-input');
+            const val = input.value.trim();
+            if (!val) return;
+            appendBotBubble(val, true);
+            input.value = '';
+            setTimeout(() => {
+                appendBotBubble(`🤖 Gracias por escribirnos. He detectado tu consulta sobre <strong>"${val}"</strong>. Selecciona tu sede preferida abajo para derivarte con el médico de turno o cotizar tu examen al instante:`);
+                setQuickButtons([
+                    { label: "📍 Sede La Arboleda", action: () => finishBotBooking('Sede La Arboleda', val) },
+                    { label: "📍 Sede Portada de Ceres", action: () => finishBotBooking('Sede Portada de Ceres', val) },
+                    { label: "🔄 Menú Principal", action: () => resetBotChat() }
+                ]);
+            }, 400);
+        }
+
+        function openFloatingBot() {
+            scrollToSection('bot-demo');
+        }
+
+        // Init on load
+        window.addEventListener('DOMContentLoaded', () => {
+            selectBranch(0, false);
+            updateOrderPreview();
+            resetBotChat();
+        });
+    </script>
+</body>
+</html>
